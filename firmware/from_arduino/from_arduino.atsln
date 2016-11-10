@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ArduinoCore", "from_arduino\ArduinoCore\ArduinoCore.cppproj", "{B1CF09D1-EAA8-4B44-8D21-7D1430707349}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "writer", "from_arduino\writer\writer.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1CF09D1-EAA8-4B44-8D21-7D1430707349}.Debug|AVR.ActiveCfg = Debug|AVR
+		{B1CF09D1-EAA8-4B44-8D21-7D1430707349}.Debug|AVR.Build.0 = Debug|AVR
+		{B1CF09D1-EAA8-4B44-8D21-7D1430707349}.Release|AVR.ActiveCfg = Release|AVR
+		{B1CF09D1-EAA8-4B44-8D21-7D1430707349}.Release|AVR.Build.0 = Release|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.Build.0 = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.ActiveCfg = Release|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

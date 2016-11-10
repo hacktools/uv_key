@@ -1,0 +1,832 @@
+
+sample_twi.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800100  000004fa  0000058e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000004fa  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000006f  00800102  00800102  00000590  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000590  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000005c0  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000078  00000000  00000000  00000600  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000c2f  00000000  00000000  00000678  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000007d3  00000000  00000000  000012a7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000626  00000000  00000000  00001a7a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000124  00000000  00000000  000020a0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000004f8  00000000  00000000  000021c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000596  00000000  00000000  000026bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000068  00000000  00000000  00002c52  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fd 00 	jmp	0x1fa	; 0x1fa <__ctors_end>
+   4:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+   8:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+   c:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  10:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  14:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  18:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  1c:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  20:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  24:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  28:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  2c:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  30:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  34:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  38:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  3c:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  40:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  44:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  48:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  4c:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  50:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  54:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  58:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  5c:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  60:	0c 94 48 01 	jmp	0x290	; 0x290 <__vector_24>
+  64:	0c 94 1a 01 	jmp	0x234	; 0x234 <__bad_interrupt>
+  68:	58 02       	muls	r21, r24
+  6a:	5c 02       	muls	r21, r28
+  6c:	5c 02       	muls	r21, r28
+  6e:	5c 02       	muls	r21, r28
+  70:	5c 02       	muls	r21, r28
+  72:	5c 02       	muls	r21, r28
+  74:	5c 02       	muls	r21, r28
+  76:	5c 02       	muls	r21, r28
+  78:	68 01       	movw	r12, r16
+  7a:	5c 02       	muls	r21, r28
+  7c:	5c 02       	muls	r21, r28
+  7e:	5c 02       	muls	r21, r28
+  80:	5c 02       	muls	r21, r28
+  82:	5c 02       	muls	r21, r28
+  84:	5c 02       	muls	r21, r28
+  86:	5c 02       	muls	r21, r28
+  88:	68 01       	movw	r12, r16
+  8a:	5c 02       	muls	r21, r28
+  8c:	5c 02       	muls	r21, r28
+  8e:	5c 02       	muls	r21, r28
+  90:	5c 02       	muls	r21, r28
+  92:	5c 02       	muls	r21, r28
+  94:	5c 02       	muls	r21, r28
+  96:	5c 02       	muls	r21, r28
+  98:	70 01       	movw	r14, r0
+  9a:	5c 02       	muls	r21, r28
+  9c:	5c 02       	muls	r21, r28
+  9e:	5c 02       	muls	r21, r28
+  a0:	5c 02       	muls	r21, r28
+  a2:	5c 02       	muls	r21, r28
+  a4:	5c 02       	muls	r21, r28
+  a6:	5c 02       	muls	r21, r28
+  a8:	97 01       	movw	r18, r14
+  aa:	5c 02       	muls	r21, r28
+  ac:	5c 02       	muls	r21, r28
+  ae:	5c 02       	muls	r21, r28
+  b0:	5c 02       	muls	r21, r28
+  b2:	5c 02       	muls	r21, r28
+  b4:	5c 02       	muls	r21, r28
+  b6:	5c 02       	muls	r21, r28
+  b8:	70 01       	movw	r14, r0
+  ba:	5c 02       	muls	r21, r28
+  bc:	5c 02       	muls	r21, r28
+  be:	5c 02       	muls	r21, r28
+  c0:	5c 02       	muls	r21, r28
+  c2:	5c 02       	muls	r21, r28
+  c4:	5c 02       	muls	r21, r28
+  c6:	5c 02       	muls	r21, r28
+  c8:	9d 01       	movw	r18, r26
+  ca:	5c 02       	muls	r21, r28
+  cc:	5c 02       	muls	r21, r28
+  ce:	5c 02       	muls	r21, r28
+  d0:	5c 02       	muls	r21, r28
+  d2:	5c 02       	muls	r21, r28
+  d4:	5c 02       	muls	r21, r28
+  d6:	5c 02       	muls	r21, r28
+  d8:	a3 01       	movw	r20, r6
+  da:	5c 02       	muls	r21, r28
+  dc:	5c 02       	muls	r21, r28
+  de:	5c 02       	muls	r21, r28
+  e0:	5c 02       	muls	r21, r28
+  e2:	5c 02       	muls	r21, r28
+  e4:	5c 02       	muls	r21, r28
+  e6:	5c 02       	muls	r21, r28
+  e8:	b5 01       	movw	r22, r10
+  ea:	5c 02       	muls	r21, r28
+  ec:	5c 02       	muls	r21, r28
+  ee:	5c 02       	muls	r21, r28
+  f0:	5c 02       	muls	r21, r28
+  f2:	5c 02       	muls	r21, r28
+  f4:	5c 02       	muls	r21, r28
+  f6:	5c 02       	muls	r21, r28
+  f8:	e0 01       	movw	r28, r0
+  fa:	5c 02       	muls	r21, r28
+  fc:	5c 02       	muls	r21, r28
+  fe:	5c 02       	muls	r21, r28
+ 100:	5c 02       	muls	r21, r28
+ 102:	5c 02       	muls	r21, r28
+ 104:	5c 02       	muls	r21, r28
+ 106:	5c 02       	muls	r21, r28
+ 108:	a9 01       	movw	r20, r18
+ 10a:	5c 02       	muls	r21, r28
+ 10c:	5c 02       	muls	r21, r28
+ 10e:	5c 02       	muls	r21, r28
+ 110:	5c 02       	muls	r21, r28
+ 112:	5c 02       	muls	r21, r28
+ 114:	5c 02       	muls	r21, r28
+ 116:	5c 02       	muls	r21, r28
+ 118:	c3 01       	movw	r24, r6
+ 11a:	5c 02       	muls	r21, r28
+ 11c:	5c 02       	muls	r21, r28
+ 11e:	5c 02       	muls	r21, r28
+ 120:	5c 02       	muls	r21, r28
+ 122:	5c 02       	muls	r21, r28
+ 124:	5c 02       	muls	r21, r28
+ 126:	5c 02       	muls	r21, r28
+ 128:	e3 01       	movw	r28, r6
+ 12a:	5c 02       	muls	r21, r28
+ 12c:	5c 02       	muls	r21, r28
+ 12e:	5c 02       	muls	r21, r28
+ 130:	5c 02       	muls	r21, r28
+ 132:	5c 02       	muls	r21, r28
+ 134:	5c 02       	muls	r21, r28
+ 136:	5c 02       	muls	r21, r28
+ 138:	e3 01       	movw	r28, r6
+ 13a:	5c 02       	muls	r21, r28
+ 13c:	5c 02       	muls	r21, r28
+ 13e:	5c 02       	muls	r21, r28
+ 140:	5c 02       	muls	r21, r28
+ 142:	5c 02       	muls	r21, r28
+ 144:	5c 02       	muls	r21, r28
+ 146:	5c 02       	muls	r21, r28
+ 148:	e3 01       	movw	r28, r6
+ 14a:	5c 02       	muls	r21, r28
+ 14c:	5c 02       	muls	r21, r28
+ 14e:	5c 02       	muls	r21, r28
+ 150:	5c 02       	muls	r21, r28
+ 152:	5c 02       	muls	r21, r28
+ 154:	5c 02       	muls	r21, r28
+ 156:	5c 02       	muls	r21, r28
+ 158:	e3 01       	movw	r28, r6
+ 15a:	5c 02       	muls	r21, r28
+ 15c:	5c 02       	muls	r21, r28
+ 15e:	5c 02       	muls	r21, r28
+ 160:	5c 02       	muls	r21, r28
+ 162:	5c 02       	muls	r21, r28
+ 164:	5c 02       	muls	r21, r28
+ 166:	5c 02       	muls	r21, r28
+ 168:	ec 01       	movw	r28, r24
+ 16a:	5c 02       	muls	r21, r28
+ 16c:	5c 02       	muls	r21, r28
+ 16e:	5c 02       	muls	r21, r28
+ 170:	5c 02       	muls	r21, r28
+ 172:	5c 02       	muls	r21, r28
+ 174:	5c 02       	muls	r21, r28
+ 176:	5c 02       	muls	r21, r28
+ 178:	1f 02       	muls	r17, r31
+ 17a:	5c 02       	muls	r21, r28
+ 17c:	5c 02       	muls	r21, r28
+ 17e:	5c 02       	muls	r21, r28
+ 180:	5c 02       	muls	r21, r28
+ 182:	5c 02       	muls	r21, r28
+ 184:	5c 02       	muls	r21, r28
+ 186:	5c 02       	muls	r21, r28
+ 188:	ec 01       	movw	r28, r24
+ 18a:	5c 02       	muls	r21, r28
+ 18c:	5c 02       	muls	r21, r28
+ 18e:	5c 02       	muls	r21, r28
+ 190:	5c 02       	muls	r21, r28
+ 192:	5c 02       	muls	r21, r28
+ 194:	5c 02       	muls	r21, r28
+ 196:	5c 02       	muls	r21, r28
+ 198:	1f 02       	muls	r17, r31
+ 19a:	5c 02       	muls	r21, r28
+ 19c:	5c 02       	muls	r21, r28
+ 19e:	5c 02       	muls	r21, r28
+ 1a0:	5c 02       	muls	r21, r28
+ 1a2:	5c 02       	muls	r21, r28
+ 1a4:	5c 02       	muls	r21, r28
+ 1a6:	5c 02       	muls	r21, r28
+ 1a8:	04 02       	muls	r16, r20
+ 1aa:	5c 02       	muls	r21, r28
+ 1ac:	5c 02       	muls	r21, r28
+ 1ae:	5c 02       	muls	r21, r28
+ 1b0:	5c 02       	muls	r21, r28
+ 1b2:	5c 02       	muls	r21, r28
+ 1b4:	5c 02       	muls	r21, r28
+ 1b6:	5c 02       	muls	r21, r28
+ 1b8:	23 02       	muls	r18, r19
+ 1ba:	5c 02       	muls	r21, r28
+ 1bc:	5c 02       	muls	r21, r28
+ 1be:	5c 02       	muls	r21, r28
+ 1c0:	5c 02       	muls	r21, r28
+ 1c2:	5c 02       	muls	r21, r28
+ 1c4:	5c 02       	muls	r21, r28
+ 1c6:	5c 02       	muls	r21, r28
+ 1c8:	23 02       	muls	r18, r19
+ 1ca:	5c 02       	muls	r21, r28
+ 1cc:	5c 02       	muls	r21, r28
+ 1ce:	5c 02       	muls	r21, r28
+ 1d0:	5c 02       	muls	r21, r28
+ 1d2:	5c 02       	muls	r21, r28
+ 1d4:	5c 02       	muls	r21, r28
+ 1d6:	5c 02       	muls	r21, r28
+ 1d8:	38 02       	muls	r19, r24
+ 1da:	5c 02       	muls	r21, r28
+ 1dc:	5c 02       	muls	r21, r28
+ 1de:	5c 02       	muls	r21, r28
+ 1e0:	5c 02       	muls	r21, r28
+ 1e2:	5c 02       	muls	r21, r28
+ 1e4:	5c 02       	muls	r21, r28
+ 1e6:	5c 02       	muls	r21, r28
+ 1e8:	52 02       	muls	r21, r18
+ 1ea:	5c 02       	muls	r21, r28
+ 1ec:	5c 02       	muls	r21, r28
+ 1ee:	5c 02       	muls	r21, r28
+ 1f0:	5c 02       	muls	r21, r28
+ 1f2:	5c 02       	muls	r21, r28
+ 1f4:	5c 02       	muls	r21, r28
+ 1f6:	5c 02       	muls	r21, r28
+ 1f8:	52 02       	muls	r21, r18
+
+000001fa <__ctors_end>:
+ 1fa:	11 24       	eor	r1, r1
+ 1fc:	1f be       	out	0x3f, r1	; 63
+ 1fe:	cf ef       	ldi	r28, 0xFF	; 255
+ 200:	d8 e0       	ldi	r29, 0x08	; 8
+ 202:	de bf       	out	0x3e, r29	; 62
+ 204:	cd bf       	out	0x3d, r28	; 61
+
+00000206 <__do_copy_data>:
+ 206:	11 e0       	ldi	r17, 0x01	; 1
+ 208:	a0 e0       	ldi	r26, 0x00	; 0
+ 20a:	b1 e0       	ldi	r27, 0x01	; 1
+ 20c:	ea ef       	ldi	r30, 0xFA	; 250
+ 20e:	f4 e0       	ldi	r31, 0x04	; 4
+ 210:	02 c0       	rjmp	.+4      	; 0x216 <__do_copy_data+0x10>
+ 212:	05 90       	lpm	r0, Z+
+ 214:	0d 92       	st	X+, r0
+ 216:	a2 30       	cpi	r26, 0x02	; 2
+ 218:	b1 07       	cpc	r27, r17
+ 21a:	d9 f7       	brne	.-10     	; 0x212 <__do_copy_data+0xc>
+
+0000021c <__do_clear_bss>:
+ 21c:	21 e0       	ldi	r18, 0x01	; 1
+ 21e:	a2 e0       	ldi	r26, 0x02	; 2
+ 220:	b1 e0       	ldi	r27, 0x01	; 1
+ 222:	01 c0       	rjmp	.+2      	; 0x226 <.do_clear_bss_start>
+
+00000224 <.do_clear_bss_loop>:
+ 224:	1d 92       	st	X+, r1
+
+00000226 <.do_clear_bss_start>:
+ 226:	a1 37       	cpi	r26, 0x71	; 113
+ 228:	b2 07       	cpc	r27, r18
+ 22a:	e1 f7       	brne	.-8      	; 0x224 <.do_clear_bss_loop>
+ 22c:	0e 94 6d 02 	call	0x4da	; 0x4da <main>
+ 230:	0c 94 7b 02 	jmp	0x4f6	; 0x4f6 <_exit>
+
+00000234 <__bad_interrupt>:
+ 234:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000238 <twi_init>:
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+  }else{
+	  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT);
+ 238:	10 92 6f 01 	sts	0x016F, r1	; 0x80016f <twi_state>
+ 23c:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 240:	80 93 6d 01 	sts	0x016D, r24	; 0x80016d <twi_sendStop>
+ 244:	80 91 70 01 	lds	r24, 0x0170	; 0x800170 <false>
+ 248:	80 93 6c 01 	sts	0x016C, r24	; 0x80016c <twi_inRepStart>
+ 24c:	8f ef       	ldi	r24, 0xFF	; 255
+ 24e:	88 b9       	out	0x08, r24	; 8
+ 250:	e9 eb       	ldi	r30, 0xB9	; 185
+ 252:	f0 e0       	ldi	r31, 0x00	; 0
+ 254:	80 81       	ld	r24, Z
+ 256:	8e 7f       	andi	r24, 0xFE	; 254
+ 258:	80 83       	st	Z, r24
+ 25a:	80 81       	ld	r24, Z
+ 25c:	8d 7f       	andi	r24, 0xFD	; 253
+ 25e:	80 83       	st	Z, r24
+ 260:	80 e2       	ldi	r24, 0x20	; 32
+ 262:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__TEXT_REGION_LENGTH__+0x7e00b8>
+ 266:	85 e4       	ldi	r24, 0x45	; 69
+ 268:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 26c:	08 95       	ret
+
+0000026e <twi_stop>:
+ * Output   none
+ */
+void twi_stop(void)
+{
+  // send stop condition
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTO);
+ 26e:	85 ed       	ldi	r24, 0xD5	; 213
+ 270:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+
+  // wait for stop condition to be exectued on bus
+  // TWINT is not set after a stop condition!
+  while(TWCR & _BV(TWSTO)){
+ 274:	ec eb       	ldi	r30, 0xBC	; 188
+ 276:	f0 e0       	ldi	r31, 0x00	; 0
+ 278:	80 81       	ld	r24, Z
+ 27a:	84 fd       	sbrc	r24, 4
+ 27c:	fd cf       	rjmp	.-6      	; 0x278 <twi_stop+0xa>
+    continue;
+  }
+
+  // update twi state
+  twi_state = TWI_READY;
+ 27e:	10 92 6f 01 	sts	0x016F, r1	; 0x80016f <twi_state>
+ 282:	08 95       	ret
+
+00000284 <twi_releaseBus>:
+ * Output   none
+ */
+void twi_releaseBus(void)
+{
+  // release bus
+  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT);
+ 284:	85 ec       	ldi	r24, 0xC5	; 197
+ 286:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+
+  // update twi state
+  twi_state = TWI_READY;
+ 28a:	10 92 6f 01 	sts	0x016F, r1	; 0x80016f <twi_state>
+ 28e:	08 95       	ret
+
+00000290 <__vector_24>:
+}
+
+ISR(TWI_vect)
+{
+ 290:	1f 92       	push	r1
+ 292:	0f 92       	push	r0
+ 294:	0f b6       	in	r0, 0x3f	; 63
+ 296:	0f 92       	push	r0
+ 298:	11 24       	eor	r1, r1
+ 29a:	2f 93       	push	r18
+ 29c:	3f 93       	push	r19
+ 29e:	4f 93       	push	r20
+ 2a0:	5f 93       	push	r21
+ 2a2:	6f 93       	push	r22
+ 2a4:	7f 93       	push	r23
+ 2a6:	8f 93       	push	r24
+ 2a8:	9f 93       	push	r25
+ 2aa:	af 93       	push	r26
+ 2ac:	bf 93       	push	r27
+ 2ae:	ef 93       	push	r30
+ 2b0:	ff 93       	push	r31
+  switch(TW_STATUS){
+ 2b2:	80 91 b9 00 	lds	r24, 0x00B9	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7e00b9>
+ 2b6:	e8 2f       	mov	r30, r24
+ 2b8:	e8 7f       	andi	r30, 0xF8	; 248
+ 2ba:	8e 2f       	mov	r24, r30
+ 2bc:	90 e0       	ldi	r25, 0x00	; 0
+ 2be:	89 3c       	cpi	r24, 0xC9	; 201
+ 2c0:	91 05       	cpc	r25, r1
+ 2c2:	08 f0       	brcs	.+2      	; 0x2c6 <__vector_24+0x36>
+ 2c4:	f9 c0       	rjmp	.+498    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+ 2c6:	fc 01       	movw	r30, r24
+ 2c8:	ec 5c       	subi	r30, 0xCC	; 204
+ 2ca:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2cc:	0c 94 75 02 	jmp	0x4ea	; 0x4ea <__tablejump2__>
+    // All Master
+    case TW_START:     // sent start condition
+    case TW_REP_START: // sent repeated start condition
+      // copy device address and r/w bit to output register and ack
+      TWDR = twi_slarw;
+ 2d0:	80 91 6e 01 	lds	r24, 0x016E	; 0x80016e <twi_slarw>
+ 2d4:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+ */
+void twi_reply(uint8_t ack)
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+ 2d8:	85 ec       	ldi	r24, 0xC5	; 197
+ 2da:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 2de:	ec c0       	rjmp	.+472    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+
+    // Master Transmitter
+    case TW_MT_SLA_ACK:  // slave receiver acked address
+    case TW_MT_DATA_ACK: // slave receiver acked data
+      // if there is data to send, send it, otherwise stop 
+      if(twi_masterBufferIndex < twi_masterBufferLength){
+ 2e0:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <twi_masterBufferIndex>
+ 2e4:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <twi_masterBufferLength>
+ 2e8:	98 17       	cp	r25, r24
+ 2ea:	80 f4       	brcc	.+32     	; 0x30c <__vector_24+0x7c>
+        // copy data to output register and ack
+        TWDR = twi_masterBuffer[twi_masterBufferIndex++];
+ 2ec:	e0 91 47 01 	lds	r30, 0x0147	; 0x800147 <twi_masterBufferIndex>
+ 2f0:	81 e0       	ldi	r24, 0x01	; 1
+ 2f2:	8e 0f       	add	r24, r30
+ 2f4:	80 93 47 01 	sts	0x0147, r24	; 0x800147 <twi_masterBufferIndex>
+ 2f8:	f0 e0       	ldi	r31, 0x00	; 0
+ 2fa:	e8 5b       	subi	r30, 0xB8	; 184
+ 2fc:	fe 4f       	sbci	r31, 0xFE	; 254
+ 2fe:	80 81       	ld	r24, Z
+ 300:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+ */
+void twi_reply(uint8_t ack)
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+ 304:	85 ec       	ldi	r24, 0xC5	; 197
+ 306:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 30a:	d6 c0       	rjmp	.+428    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+      if(twi_masterBufferIndex < twi_masterBufferLength){
+        // copy data to output register and ack
+        TWDR = twi_masterBuffer[twi_masterBufferIndex++];
+        twi_reply(1);
+      }else{
+	if (twi_sendStop)
+ 30c:	80 91 6d 01 	lds	r24, 0x016D	; 0x80016d <twi_sendStop>
+ 310:	88 23       	and	r24, r24
+ 312:	19 f0       	breq	.+6      	; 0x31a <__vector_24+0x8a>
+          twi_stop();
+ 314:	0e 94 37 01 	call	0x26e	; 0x26e <twi_stop>
+ 318:	cf c0       	rjmp	.+414    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+	else {
+	  twi_inRepStart = true;	// we're gonna send the START
+ 31a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 31e:	80 93 6c 01 	sts	0x016C, r24	; 0x80016c <twi_inRepStart>
+	  // don't enable the interrupt. We'll generate the start, but we 
+	  // avoid handling the interrupt until we're in the next transaction,
+	  // at the point where we would normally issue the start.
+	  TWCR = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
+ 322:	84 ea       	ldi	r24, 0xA4	; 164
+ 324:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+	  twi_state = TWI_READY;
+ 328:	10 92 6f 01 	sts	0x016F, r1	; 0x80016f <twi_state>
+ 32c:	c5 c0       	rjmp	.+394    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+	}
+      }
+      break;
+    case TW_MT_SLA_NACK:  // address sent, nack received
+      twi_error = TW_MT_SLA_NACK;
+ 32e:	80 e2       	ldi	r24, 0x20	; 32
+ 330:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <__data_end>
+      twi_stop();
+ 334:	0e 94 37 01 	call	0x26e	; 0x26e <twi_stop>
+      break;
+ 338:	bf c0       	rjmp	.+382    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+    case TW_MT_DATA_NACK: // data sent, nack received
+      twi_error = TW_MT_DATA_NACK;
+ 33a:	80 e3       	ldi	r24, 0x30	; 48
+ 33c:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <__data_end>
+      twi_stop();
+ 340:	0e 94 37 01 	call	0x26e	; 0x26e <twi_stop>
+      break;
+ 344:	b9 c0       	rjmp	.+370    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+    case TW_MT_ARB_LOST: // lost bus arbitration
+      twi_error = TW_MT_ARB_LOST;
+ 346:	88 e3       	ldi	r24, 0x38	; 56
+ 348:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <__data_end>
+      twi_releaseBus();
+ 34c:	0e 94 42 01 	call	0x284	; 0x284 <twi_releaseBus>
+      break;
+ 350:	b3 c0       	rjmp	.+358    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+
+    // Master Receiver
+    case TW_MR_DATA_ACK: // data received, ack sent
+      // put byte into buffer
+      twi_masterBuffer[twi_masterBufferIndex++] = TWDR;
+ 352:	e0 91 47 01 	lds	r30, 0x0147	; 0x800147 <twi_masterBufferIndex>
+ 356:	81 e0       	ldi	r24, 0x01	; 1
+ 358:	8e 0f       	add	r24, r30
+ 35a:	80 93 47 01 	sts	0x0147, r24	; 0x800147 <twi_masterBufferIndex>
+ 35e:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+ 362:	f0 e0       	ldi	r31, 0x00	; 0
+ 364:	e8 5b       	subi	r30, 0xB8	; 184
+ 366:	fe 4f       	sbci	r31, 0xFE	; 254
+ 368:	80 83       	st	Z, r24
+    case TW_MR_SLA_ACK:  // address sent, ack received
+      // ack if more bytes are expected, otherwise nack
+      if(twi_masterBufferIndex < twi_masterBufferLength){
+ 36a:	90 91 47 01 	lds	r25, 0x0147	; 0x800147 <twi_masterBufferIndex>
+ 36e:	80 91 46 01 	lds	r24, 0x0146	; 0x800146 <twi_masterBufferLength>
+ 372:	98 17       	cp	r25, r24
+ 374:	20 f4       	brcc	.+8      	; 0x37e <__vector_24+0xee>
+ */
+void twi_reply(uint8_t ack)
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+ 376:	85 ec       	ldi	r24, 0xC5	; 197
+ 378:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 37c:	9d c0       	rjmp	.+314    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+  }else{
+	  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT);
+ 37e:	85 e8       	ldi	r24, 0x85	; 133
+ 380:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 384:	99 c0       	rjmp	.+306    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+        twi_reply(0);
+      }
+      break;
+    case TW_MR_DATA_NACK: // data received, nack sent
+      // put final byte into buffer
+      twi_masterBuffer[twi_masterBufferIndex++] = TWDR;
+ 386:	e0 91 47 01 	lds	r30, 0x0147	; 0x800147 <twi_masterBufferIndex>
+ 38a:	81 e0       	ldi	r24, 0x01	; 1
+ 38c:	8e 0f       	add	r24, r30
+ 38e:	80 93 47 01 	sts	0x0147, r24	; 0x800147 <twi_masterBufferIndex>
+ 392:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+ 396:	f0 e0       	ldi	r31, 0x00	; 0
+ 398:	e8 5b       	subi	r30, 0xB8	; 184
+ 39a:	fe 4f       	sbci	r31, 0xFE	; 254
+ 39c:	80 83       	st	Z, r24
+	if (twi_sendStop)
+ 39e:	80 91 6d 01 	lds	r24, 0x016D	; 0x80016d <twi_sendStop>
+ 3a2:	88 23       	and	r24, r24
+ 3a4:	19 f0       	breq	.+6      	; 0x3ac <__vector_24+0x11c>
+          twi_stop();
+ 3a6:	0e 94 37 01 	call	0x26e	; 0x26e <twi_stop>
+ 3aa:	86 c0       	rjmp	.+268    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+	else {
+	  twi_inRepStart = true;	// we're gonna send the START
+ 3ac:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 3b0:	80 93 6c 01 	sts	0x016C, r24	; 0x80016c <twi_inRepStart>
+	  // don't enable the interrupt. We'll generate the start, but we 
+	  // avoid handling the interrupt until we're in the next transaction,
+	  // at the point where we would normally issue the start.
+	  TWCR = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
+ 3b4:	84 ea       	ldi	r24, 0xA4	; 164
+ 3b6:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+	  twi_state = TWI_READY;
+ 3ba:	10 92 6f 01 	sts	0x016F, r1	; 0x80016f <twi_state>
+ 3be:	7c c0       	rjmp	.+248    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+	}    
+	break;
+    case TW_MR_SLA_NACK: // address sent, nack received
+      twi_stop();
+ 3c0:	0e 94 37 01 	call	0x26e	; 0x26e <twi_stop>
+      break;
+ 3c4:	79 c0       	rjmp	.+242    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+    case TW_SR_SLA_ACK:   // addressed, returned ack
+    case TW_SR_GCALL_ACK: // addressed generally, returned ack
+    case TW_SR_ARB_LOST_SLA_ACK:   // lost arbitration, returned ack
+    case TW_SR_ARB_LOST_GCALL_ACK: // lost arbitration, returned ack
+      // enter slave receiver mode
+      twi_state = TWI_SRX;
+ 3c6:	83 e0       	ldi	r24, 0x03	; 3
+ 3c8:	80 93 6f 01 	sts	0x016F, r24	; 0x80016f <twi_state>
+      // indicate that rx buffer can be overwritten and ack
+      twi_rxBufferIndex = 0;
+ 3cc:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <twi_rxBufferIndex>
+ */
+void twi_reply(uint8_t ack)
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+ 3d0:	85 ec       	ldi	r24, 0xC5	; 197
+ 3d2:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 3d6:	70 c0       	rjmp	.+224    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+      twi_reply(1);
+      break;
+    case TW_SR_DATA_ACK:       // data received, returned ack
+    case TW_SR_GCALL_DATA_ACK: // data received generally, returned ack
+      // if there is still room in the rx buffer
+      if(twi_rxBufferIndex < TWI_BUFFER_LENGTH){
+ 3d8:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <twi_rxBufferIndex>
+ 3dc:	80 32       	cpi	r24, 0x20	; 32
+ 3de:	80 f4       	brcc	.+32     	; 0x400 <__LOCK_REGION_LENGTH__>
+        // put byte in buffer and ack
+        twi_rxBuffer[twi_rxBufferIndex++] = TWDR;
+ 3e0:	e0 91 03 01 	lds	r30, 0x0103	; 0x800103 <twi_rxBufferIndex>
+ 3e4:	81 e0       	ldi	r24, 0x01	; 1
+ 3e6:	8e 0f       	add	r24, r30
+ 3e8:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <twi_rxBufferIndex>
+ 3ec:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+ 3f0:	f0 e0       	ldi	r31, 0x00	; 0
+ 3f2:	ec 5f       	subi	r30, 0xFC	; 252
+ 3f4:	fe 4f       	sbci	r31, 0xFE	; 254
+ 3f6:	80 83       	st	Z, r24
+ */
+void twi_reply(uint8_t ack)
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+ 3f8:	85 ec       	ldi	r24, 0xC5	; 197
+ 3fa:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 3fe:	5c c0       	rjmp	.+184    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+  }else{
+	  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT);
+ 400:	85 e8       	ldi	r24, 0x85	; 133
+ 402:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 406:	58 c0       	rjmp	.+176    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+        twi_reply(0);
+      }
+      break;
+    case TW_SR_STOP: // stop or repeated start condition received
+      // put a null char after data if there's room
+      if(twi_rxBufferIndex < TWI_BUFFER_LENGTH){
+ 408:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <twi_rxBufferIndex>
+ 40c:	80 32       	cpi	r24, 0x20	; 32
+ 40e:	30 f4       	brcc	.+12     	; 0x41c <__LOCK_REGION_LENGTH__+0x1c>
+        twi_rxBuffer[twi_rxBufferIndex] = '\0';
+ 410:	e0 91 03 01 	lds	r30, 0x0103	; 0x800103 <twi_rxBufferIndex>
+ 414:	f0 e0       	ldi	r31, 0x00	; 0
+ 416:	ec 5f       	subi	r30, 0xFC	; 252
+ 418:	fe 4f       	sbci	r31, 0xFE	; 254
+ 41a:	10 82       	st	Z, r1
+      }
+      // sends ack and stops interface for clock stretching
+      twi_stop();
+ 41c:	0e 94 37 01 	call	0x26e	; 0x26e <twi_stop>
+      // callback to user defined callback
+      twi_onSlaveReceive(twi_rxBuffer, twi_rxBufferIndex);
+ 420:	60 91 03 01 	lds	r22, 0x0103	; 0x800103 <twi_rxBufferIndex>
+ 424:	70 e0       	ldi	r23, 0x00	; 0
+ 426:	e0 91 68 01 	lds	r30, 0x0168	; 0x800168 <twi_onSlaveReceive>
+ 42a:	f0 91 69 01 	lds	r31, 0x0169	; 0x800169 <twi_onSlaveReceive+0x1>
+ 42e:	84 e0       	ldi	r24, 0x04	; 4
+ 430:	91 e0       	ldi	r25, 0x01	; 1
+ 432:	09 95       	icall
+      // since we submit rx buffer to "wire" library, we can reset it
+      twi_rxBufferIndex = 0;
+ 434:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <twi_rxBufferIndex>
+      // ack future responses and leave slave receiver state
+      twi_releaseBus();
+ 438:	0e 94 42 01 	call	0x284	; 0x284 <twi_releaseBus>
+      break;
+ 43c:	3d c0       	rjmp	.+122    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+  }else{
+	  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT);
+ 43e:	85 e8       	ldi	r24, 0x85	; 133
+ 440:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 444:	39 c0       	rjmp	.+114    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+    
+    // Slave Transmitter
+    case TW_ST_SLA_ACK:          // addressed, returned ack
+    case TW_ST_ARB_LOST_SLA_ACK: // arbitration lost, returned ack
+      // enter slave transmitter mode
+      twi_state = TWI_STX;
+ 446:	84 e0       	ldi	r24, 0x04	; 4
+ 448:	80 93 6f 01 	sts	0x016F, r24	; 0x80016f <twi_state>
+      // ready the tx buffer index for iteration
+      twi_txBufferIndex = 0;
+ 44c:	10 92 25 01 	sts	0x0125, r1	; 0x800125 <twi_txBufferIndex>
+      // set tx buffer length to be zero, to verify if user changes it
+      twi_txBufferLength = 0;
+ 450:	10 92 24 01 	sts	0x0124, r1	; 0x800124 <twi_txBufferLength>
+      // request for txBuffer to be filled and length to be set
+      // note: user must call twi_transmit(bytes, length) to do this
+      twi_onSlaveTransmit();
+ 454:	e0 91 6a 01 	lds	r30, 0x016A	; 0x80016a <twi_onSlaveTransmit>
+ 458:	f0 91 6b 01 	lds	r31, 0x016B	; 0x80016b <twi_onSlaveTransmit+0x1>
+ 45c:	09 95       	icall
+      // if they didn't change buffer & length, initialize it
+      if(0 == twi_txBufferLength){
+ 45e:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <twi_txBufferLength>
+ 462:	81 11       	cpse	r24, r1
+ 464:	05 c0       	rjmp	.+10     	; 0x470 <__LOCK_REGION_LENGTH__+0x70>
+        twi_txBufferLength = 1;
+ 466:	81 e0       	ldi	r24, 0x01	; 1
+ 468:	80 93 24 01 	sts	0x0124, r24	; 0x800124 <twi_txBufferLength>
+        twi_txBuffer[0] = 0x00;
+ 46c:	10 92 26 01 	sts	0x0126, r1	; 0x800126 <twi_txBuffer>
+      }
+      // transmit first byte from buffer, fall
+    case TW_ST_DATA_ACK: // byte sent, ack returned
+      // copy data to output register
+      TWDR = twi_txBuffer[twi_txBufferIndex++];
+ 470:	e0 91 25 01 	lds	r30, 0x0125	; 0x800125 <twi_txBufferIndex>
+ 474:	81 e0       	ldi	r24, 0x01	; 1
+ 476:	8e 0f       	add	r24, r30
+ 478:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <twi_txBufferIndex>
+ 47c:	f0 e0       	ldi	r31, 0x00	; 0
+ 47e:	ea 5d       	subi	r30, 0xDA	; 218
+ 480:	fe 4f       	sbci	r31, 0xFE	; 254
+ 482:	80 81       	ld	r24, Z
+ 484:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+      // if there is more to send, ack, otherwise nack
+      if(twi_txBufferIndex < twi_txBufferLength){
+ 488:	90 91 25 01 	lds	r25, 0x0125	; 0x800125 <twi_txBufferIndex>
+ 48c:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <twi_txBufferLength>
+ 490:	98 17       	cp	r25, r24
+ 492:	20 f4       	brcc	.+8      	; 0x49c <__LOCK_REGION_LENGTH__+0x9c>
+ */
+void twi_reply(uint8_t ack)
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+ 494:	85 ec       	ldi	r24, 0xC5	; 197
+ 496:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 49a:	0e c0       	rjmp	.+28     	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+  }else{
+	  TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT);
+ 49c:	85 e8       	ldi	r24, 0x85	; 133
+ 49e:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 4a2:	0a c0       	rjmp	.+20     	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+ */
+void twi_reply(uint8_t ack)
+{
+  // transmit master read ready signal, with or without ack
+  if(ack){
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWINT) | _BV(TWEA);
+ 4a4:	85 ec       	ldi	r24, 0xC5	; 197
+ 4a6:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+    case TW_ST_DATA_NACK: // received nack, we are done 
+    case TW_ST_LAST_DATA: // received ack, but we are done already!
+      // ack future responses
+      twi_reply(1);
+      // leave slave receiver state
+      twi_state = TWI_READY;
+ 4aa:	10 92 6f 01 	sts	0x016F, r1	; 0x80016f <twi_state>
+      break;
+ 4ae:	04 c0       	rjmp	.+8      	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+
+    // All
+    case TW_NO_INFO:   // no state information
+      break;
+    case TW_BUS_ERROR: // bus error, illegal stop/start
+      twi_error = TW_BUS_ERROR;
+ 4b0:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <__data_end>
+      twi_stop();
+ 4b4:	0e 94 37 01 	call	0x26e	; 0x26e <twi_stop>
+      break;
+  }
+}
+ 4b8:	ff 91       	pop	r31
+ 4ba:	ef 91       	pop	r30
+ 4bc:	bf 91       	pop	r27
+ 4be:	af 91       	pop	r26
+ 4c0:	9f 91       	pop	r25
+ 4c2:	8f 91       	pop	r24
+ 4c4:	7f 91       	pop	r23
+ 4c6:	6f 91       	pop	r22
+ 4c8:	5f 91       	pop	r21
+ 4ca:	4f 91       	pop	r20
+ 4cc:	3f 91       	pop	r19
+ 4ce:	2f 91       	pop	r18
+ 4d0:	0f 90       	pop	r0
+ 4d2:	0f be       	out	0x3f, r0	; 63
+ 4d4:	0f 90       	pop	r0
+ 4d6:	1f 90       	pop	r1
+ 4d8:	18 95       	reti
+
+000004da <main>:
+
+
+
+int main(void)
+{
+    twi_init();
+ 4da:	0e 94 1c 01 	call	0x238	; 0x238 <twi_init>
+ * Output   none
+ */
+void twi_setAddress(uint8_t address)
+{
+  // set twi slave address (skip over TWGCE bit)
+  TWAR = address << 1;
+ 4de:	8e ea       	ldi	r24, 0xAE	; 174
+ 4e0:	80 93 ba 00 	sts	0x00BA, r24	; 0x8000ba <__TEXT_REGION_LENGTH__+0x7e00ba>
+
+int main(void)
+{
+    twi_init();
+	twi_setAddress(87);
+}
+ 4e4:	80 e0       	ldi	r24, 0x00	; 0
+ 4e6:	90 e0       	ldi	r25, 0x00	; 0
+ 4e8:	08 95       	ret
+
+000004ea <__tablejump2__>:
+ 4ea:	ee 0f       	add	r30, r30
+ 4ec:	ff 1f       	adc	r31, r31
+ 4ee:	05 90       	lpm	r0, Z+
+ 4f0:	f4 91       	lpm	r31, Z
+ 4f2:	e0 2d       	mov	r30, r0
+ 4f4:	09 94       	ijmp
+
+000004f6 <_exit>:
+ 4f6:	f8 94       	cli
+
+000004f8 <__stop_program>:
+ 4f8:	ff cf       	rjmp	.-2      	; 0x4f8 <__stop_program>
